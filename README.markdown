@@ -1,7 +1,7 @@
 iOS-Universal-Library-Template
 ==============================
 
-An Xcode 4 project template to create universal (armv6, armv7 and simulator) frameworks for iOS.
+An Xcode 4 project template to create universal (armv6, armv7 and simulator) static libraries for iOS.
 
 The existing static library template provided with Xcode only builds one architecture, which is not particularly suitable for distribution. A number of people have created scripts to create universal libraries, which require some mucking around with Xcode target settings to use.
 
