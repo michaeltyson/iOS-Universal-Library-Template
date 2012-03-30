@@ -16,6 +16,14 @@ Copy the `Universal Static Library.xctemplate` folder into `~/Library/Developer/
 Sorted.
 
 
+Use
+---
+
+After the build process finishes, you'll be left with a static library with all three architectures (armv6, armv7, i386) - you can verify this by opening up the terminal and typing `file {path to library}`.
+
+The build script automatically copies the universal product (from the "Release-universal" or "Debug-universal" folders in the built products dir) back over the original single-architecture build, so you'll find the same universal version in each of the build folders.
+
+
 A Note About Universal Frameworks
 ---------------------------------
 

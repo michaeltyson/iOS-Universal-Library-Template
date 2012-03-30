@@ -97,10 +97,10 @@
 					<string>false</string>
 					<key>ShellScript</key>
 					<string>#
-# Fat static library script
+# Universal static library script
 # http://github.com/michaeltyson/iOS-Universal-Library-Template
 #
-# Version 2.2
+# Version 2.3
 # 
 # Purpose:
 #   Create a static library for iPhone from within XCode
@@ -200,6 +200,10 @@ rm -rf &quot;${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot;
 #
 echo &quot;lipo: for current configuration (${CONFIGURATION}) creating output file: ${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot;
 lipo -create -output &quot;${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; &quot;${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}&quot; &quot;${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}&quot;
+
+echo &quot;Copying universal build back over to ${CURRENTCONFIG_DEVICE_DIR} and ${CURRENTCONFIG_SIMULATOR_DIR}&quot;
+cp &quot;${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; &quot;${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}&quot;
+cp &quot;${CREATING_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; &quot;${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}&quot;
 
 #########
 #
