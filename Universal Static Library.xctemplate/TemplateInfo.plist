@@ -181,7 +181,7 @@ then
     # Also copy public headers
     if [ -d &quot;${CURRENTCONFIG_DEVICE_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}&quot; ]
     then
-        mkdir -p &quot;${CREATING_UNIVERSAL_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}&quot;
+        mkdir -p &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}&quot;
         cp &quot;${CURRENTCONFIG_DEVICE_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/&quot;* &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}&quot;
     fi
 else
