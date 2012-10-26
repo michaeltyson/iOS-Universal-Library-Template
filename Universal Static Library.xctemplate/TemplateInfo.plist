@@ -201,6 +201,7 @@ if [ ! -e &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; -o \
 &quot;${CURRENTCONFIG_DEVICE_DIR}/${EXECUTABLE_NAME}&quot; -nt &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; -o \
 &quot;${CURRENTCONFIG_SIMULATOR_DIR}/${EXECUTABLE_NAME}&quot; -nt &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot; ]
 then
+rm -rf &quot;${CURRENTCONFIG_UNIVERSAL_DIR}&quot;
 cp -R &quot;${CURRENTCONFIG_DEVICE_DIR}&quot; &quot;${CURRENTCONFIG_UNIVERSAL_DIR}&quot;
 rm -f &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot;
 
@@ -214,7 +215,8 @@ touch &quot;${CURRENTCONFIG_UNIVERSAL_DIR}/${EXECUTABLE_NAME}&quot;
 
 else
 echo &quot;Everything up to date.&quot;
-fi</string>
+fi
+</string>
 				</dict>
 			</array>
 			<key>Frameworks</key>
