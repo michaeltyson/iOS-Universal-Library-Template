@@ -228,17 +228,13 @@ fi
 			<key>SharedSettings</key>
 			<dict>
 				<key>ARCHS</key>
-				<string>armv6 $(ARCHS_STANDARD_32_BIT)</string>
-				<key>GCC_THUMB_SUPPORT</key>
-				<string>NO</string>
+				<string>$(ARCHS_STANDARD_32_BIT)</string>
 				<key>DSTROOT</key>
 				<string>/tmp/___PACKAGENAMEASIDENTIFIER___.dst</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
 				<string>___PACKAGENAME___/___PACKAGENAME___-Prefix.pch</string>
-				<key>OTHER_LDFLAGS</key>
-				<string>-ObjC</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
 			</dict>
